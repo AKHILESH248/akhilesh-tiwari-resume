@@ -2,960 +2,371 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Akhilesh Tiwari | Senior Technical Recruiter | Data, AI & Analytics Talent Specialist">
-<title>Akhilesh Tiwari | Talent + Analytics Portfolio</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Akhilesh Tiwari | Senior Executive Resourcing | Technical Recruiting | Data, AI & Analytics">
+<title>Akhilesh Tiwari | Talent × Technology × Data</title>
 <style>
 :root{
-  --bg:#06101e;
-  --side:#081526;
-  --card:#0c1b2e;
-  --card2:#10243b;
-  --text:#f5f8ff;
-  --muted:#9cafc7;
-  --blue:#3798ff;
-  --violet:#9b5cff;
-  --cyan:#48dfd0;
-  --line:rgba(255,255,255,.10);
-  --shadow:0 18px 55px rgba(0,0,0,.28);
+  --bg:#07111f;--surface:#0c1929;--surface2:#10233a;--surface3:#142b45;
+  --text:#f5f8ff;--muted:#9eb0c7;--line:rgba(255,255,255,.10);
+  --blue:#3b9bff;--violet:#8d63ff;--cyan:#45dfd0;--amber:#ffbd66;
+  --good:#6ee7b7;--shadow:0 22px 60px rgba(0,0,0,.28);
+  --radius:20px;--max:1180px;
 }
 html[data-theme="light"]{
-  --bg:#eef4fb;
-  --side:#f8fbff;
-  --card:#fff;
-  --card2:#f4f8fd;
-  --text:#0c1728;
-  --muted:#5c6c80;
-  --line:rgba(12,23,40,.10);
-  --shadow:0 15px 40px rgba(37,67,100,.12);
+  --bg:#eef4fb;--surface:#fff;--surface2:#f7faff;--surface3:#edf4fd;
+  --text:#101a2b;--muted:#5d6d81;--line:rgba(16,26,43,.10);
+  --shadow:0 18px 50px rgba(35,65,100,.12);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
-  margin:0;
-  background:radial-gradient(circle at 70% 0,rgba(55,152,255,.12),transparent 28%),var(--bg);
-  color:var(--text);
-  font-family:Inter,Segoe UI,Arial,sans-serif;
-  line-height:1.5;
+  margin:0;background:
+  radial-gradient(circle at 85% -10%,rgba(59,155,255,.16),transparent 30%),
+  radial-gradient(circle at 5% 30%,rgba(141,99,255,.09),transparent 26%),var(--bg);
+  color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.55;overflow-x:hidden
 }
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.sidebar{
-  position:fixed;left:0;top:0;width:245px;height:100vh;
-  padding:25px 18px;background:rgba(8,21,38,.94);
-  border-right:1px solid var(--line);backdrop-filter:blur(18px);
-  z-index:50;overflow:auto;
+a{color:inherit;text-decoration:none} button{font:inherit}
+.container{width:min(var(--max),calc(100% - 32px));margin:auto}
+.top{
+ position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
+ backdrop-filter:blur(18px);border-bottom:1px solid var(--line)
 }
-.profile{text-align:center}
-.avatar{
-  width:125px;height:125px;margin:auto;border-radius:50%;
-  display:grid;place-items:center;
-  background:linear-gradient(135deg,#147eff,#7258ff);
-  border:3px solid var(--blue);
-  box-shadow:0 0 0 8px rgba(55,152,255,.08);
-  color:white;font-size:40px;font-weight:800;
-}
-.profile h2{margin:13px 0 0}
-.profile p{margin:4px;color:var(--blue);font-size:13px}
-.nav{margin:25px 0}
-.nav a{
-  display:flex;padding:11px 13px;margin:4px 0;border-radius:10px;
-  color:var(--muted);font-size:14px;
-}
-.nav a:hover,.nav a.active{
-  background:linear-gradient(90deg,rgba(55,152,255,.28),rgba(55,152,255,.08));
-  color:var(--text);
-  box-shadow:inset 0 0 0 1px rgba(55,152,255,.35);
-}
-.contact{
-  border-top:1px solid var(--line);
-  padding-top:18px;font-size:12px;color:var(--muted);
-  word-break:break-word;
-}
-.contact b{color:var(--blue);font-size:14px}
-.contact a{color:var(--muted)}
-.main{margin-left:245px;padding:24px;max-width:1700px}
-.topbar{
-  position:sticky;top:14px;z-index:40;
-  display:flex;justify-content:flex-end;gap:10px;
-  pointer-events:none;
-}
-.topbar>*{pointer-events:auto}
+.top-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;white-space:nowrap}
+.brand-mark{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff}
+.nav{display:flex;gap:3px;align-items:center}
+.nav a{padding:9px 10px;border-radius:10px;color:var(--muted);font-size:12px;font-weight:800}
+.nav a:hover,.nav a.active{background:var(--surface2);color:var(--text)}
+.actions{display:flex;gap:7px;align-items:center}
 .btn{
-  border:1px solid var(--line);
-  background:rgba(12,27,46,.82);
-  color:var(--text);
-  padding:11px 15px;border-radius:10px;
-  font-weight:700;cursor:pointer;backdrop-filter:blur(15px);
+ display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line);
+ background:var(--surface);color:var(--text);padding:10px 13px;border-radius:11px;
+ font-size:12px;font-weight:850;cursor:pointer;transition:.2s ease
 }
-.btn.primary{
-  background:linear-gradient(135deg,#147eff,#7258ff);
-  border:0;color:white;
+.btn:hover{transform:translateY(-1px);border-color:rgba(59,155,255,.45)}
+.btn.primary{background:linear-gradient(135deg,var(--blue),var(--violet));border:0;color:#fff}
+.menu{display:none}
+.hero{padding:72px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:28px;align-items:center}
+.eyebrow{color:var(--cyan);font-size:10px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}
+h1{font-size:clamp(45px,6.4vw,78px);line-height:.95;letter-spacing:-4px;margin:12px 0 17px}
+.grad{background:linear-gradient(90deg,var(--blue),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:17px;color:var(--muted);max-width:760px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:19px 0 0}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 10px;font-size:10px;color:var(--muted)}
+.hero-card{
+ background:linear-gradient(155deg,var(--surface3),var(--surface));border:1px solid var(--line);
+ border-radius:24px;padding:25px;box-shadow:var(--shadow);position:relative;overflow:hidden
 }
-.hero{
-  min-height:520px;padding:55px 30px;
-  display:grid;grid-template-columns:1.2fr .8fr;
-  align-items:center;position:relative;overflow:hidden;
+.hero-card:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-80px;top:-90px;background:rgba(59,155,255,.12)}
+.avatar{width:88px;height:88px;border-radius:24px;display:grid;place-items:center;background:linear-gradient(135deg,#167fff,#7359ff);color:#fff;font-size:28px;font-weight:950;border:2px solid rgba(255,255,255,.2)}
+.hero-card h2{margin:16px 0 2px;font-size:23px}.hero-card p{margin:2px 0;color:var(--muted);font-size:12px}
+.status{display:inline-flex;align-items:center;gap:6px;margin-top:13px;padding:6px 9px;border-radius:999px;background:rgba(110,231,183,.08);color:var(--good);font-size:10px;font-weight:850}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.stat{padding:12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025)}
+.stat strong{display:block;font-size:22px}.stat span{font-size:9px;color:var(--muted)}
+.section{padding:24px;margin:18px 0;background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);scroll-margin-top:88px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:18px}
+.section-head h2{margin:3px 0 0;font-size:25px}.section-head p{margin:0;color:var(--muted);font-size:11px}
+.grid{display:grid;gap:12px}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{padding:17px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+.card h3{margin:0 0 7px;font-size:14px}.card p{margin:0;color:var(--muted);font-size:11px}
+.timeline{position:relative;display:grid;gap:12px}
+.timeline:before{content:"";position:absolute;left:35px;top:25px;bottom:25px;width:1px;background:linear-gradient(var(--blue),var(--violet),transparent)}
+.job{
+ position:relative;display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;
+ padding:17px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025)
 }
-.hero:after{
-  content:"";position:absolute;width:650px;height:650px;
-  border:1px solid rgba(55,152,255,.16);border-radius:50%;
-  right:-150px;top:-170px;
-  box-shadow:0 0 90px rgba(55,152,255,.12);
+.job:hover{border-color:rgba(59,155,255,.35)}
+.logo{
+ width:56px;height:56px;border-radius:15px;display:grid;place-items:center;text-align:center;
+ background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;font-size:11px;font-weight:950;
+ border:1px solid rgba(255,255,255,.16);position:relative;z-index:1
 }
-.hero h1{
-  font-size:clamp(45px,6vw,80px);
-  line-height:.98;margin:10px 0;letter-spacing:-4px;
-}
-.grad{
-  background:linear-gradient(90deg,var(--blue),#8f65ff);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.hero p{color:var(--muted);max-width:700px;font-size:18px}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}
-.chip{
-  border:1px solid var(--line);padding:8px 12px;border-radius:999px;
-  font-size:12px;background:rgba(255,255,255,.025);
-}
-.quote,.panel{
-  background:linear-gradient(180deg,var(--card2),var(--card));
-  border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);
-}
-.quote{padding:28px;z-index:2}
-.quote q{font-size:20px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:25px}
-.stat{padding-top:16px;border-top:1px solid var(--line)}
-.stat strong{font-size:24px;display:block}
-.stat span{font-size:11px;color:var(--muted)}
-.counter{transition:transform .2s}
-.stat:hover .counter{transform:scale(1.05)}
-.section{scroll-margin-top:90px;margin-bottom:18px}
-.panel{padding:22px}
-.head,.section-head{
-  display:flex;justify-content:space-between;align-items:center;
-  gap:20px;margin-bottom:18px;
-}
-.head h2,.section-head h2{margin:0;font-size:20px}
-.head p,.section-head p{margin:0;color:var(--muted);font-size:13px}
-.eyebrow{
-  color:var(--cyan);font-size:11px;font-weight:800;
-  letter-spacing:.08em;text-transform:uppercase;
-}
-.timeline{
-  display:flex;align-items:flex-start;overflow-x:auto;padding:18px 5px 8px;
-}
-.node{
-  min-width:180px;text-align:center;position:relative;padding:0 10px;
-}
-.node:not(:last-child):after{
-  content:"";position:absolute;top:22px;left:60%;
-  width:80%;height:2px;
-  background:linear-gradient(90deg,var(--blue),var(--violet));
-}
-.dot{
-  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
-  margin:auto;background:var(--card2);border:2px solid var(--blue);
-  position:relative;z-index:2;
-}
-.node b{display:block;font-size:12px;margin-top:12px}
-.node small{color:var(--muted)}
-.node.analytics .dot{
-  border-color:var(--violet);
-  box-shadow:0 0 25px rgba(155,92,255,.35);
-}
-.dashboard{
-  display:grid;grid-template-columns:1fr 1.2fr 1.25fr 1.35fr;gap:14px;
-}
-.panel h3{margin-top:0}
-.wheel{
-  width:210px;height:210px;margin:10px auto;border-radius:50%;
-  background:conic-gradient(var(--blue) 0 25%,var(--cyan) 25% 50%,#6f62ff 50% 75%,#d38b2d 75%);
-  display:grid;place-items:center;
-}
-.wheel:after{
-  content:"Core Hiring\A Domains";white-space:pre;text-align:center;
-  display:grid;place-items:center;width:100px;height:100px;
-  background:var(--card);border-radius:50%;font-size:12px;
-}
-.client-grid,.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.tile{
-  background:rgba(255,255,255,.025);border:1px solid var(--line);
-  padding:13px;border-radius:10px;text-align:center;font-size:12px;
-}
-.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.metric{border:1px solid var(--line);padding:13px;border-radius:10px}
-.metric strong{display:block;font-size:23px}
-.metric span{color:var(--muted);font-size:11px}
-.bars{margin-top:15px}
-.bar{
-  display:grid;grid-template-columns:115px 1fr 36px;gap:8px;
-  align-items:center;font-size:11px;margin:9px 0;
-}
-.track{height:7px;background:rgba(255,255,255,.08);border-radius:10px;overflow:hidden}
-.fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--violet))}
-.expertise{
-  display:grid;grid-template-columns:repeat(6,1fr);gap:12px;
-}
-.expert{padding:14px}
-.expert b{font-size:13px}
-.expert p{font-size:11px;color:var(--muted)}
-.interactive-note{font-size:11px;color:var(--muted);margin-top:10px}
-.service-grid,.booking-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);gap:11px;
-}
-.service-card,.booking-card{
-  display:flex;flex-direction:column;min-height:245px;
-  padding:18px;border:1px solid var(--line);border-radius:15px;
-  background:rgba(255,255,255,.02);transition:.22s;
-}
-.service-card:hover,.booking-card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(59,151,255,.52);
-  box-shadow:0 15px 35px rgba(0,0,0,.18);
-}
-.service-icon,.booking-icon{
-  width:44px;height:44px;display:grid;place-items:center;
-  border-radius:12px;
-  background:linear-gradient(135deg,rgba(59,151,255,.18),rgba(140,99,255,.18));
-  border:1px solid rgba(59,151,255,.25);
-  color:var(--blue);font-weight:850;font-size:11px;
-}
-.service-card h3,.booking-card h3{margin:14px 0 7px;font-size:16px}
-.service-card p,.booking-card p{
-  color:var(--muted);font-size:12px;line-height:1.55;margin:0;
-}
-.service-btn{margin-top:auto;width:max-content;font-size:11px;padding:8px 10px}
-.booking-card b{margin-top:auto;color:var(--cyan);font-size:11px}
-.service-cta{
-  margin-top:13px;padding:17px;
-  border:1px solid rgba(73,222,208,.2);border-radius:14px;
-  background:linear-gradient(90deg,rgba(73,222,208,.07),rgba(59,151,255,.06));
-  display:flex;align-items:center;justify-content:space-between;gap:15px;
-}
-.service-cta b{display:block;font-size:15px}
-.service-cta span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
-.booking-note{
-  margin-top:13px;padding:14px;
-  border:1px solid rgba(73,222,208,.18);border-radius:13px;
-  background:rgba(73,222,208,.05);color:var(--muted);font-size:11px;
-}
-.booking-note b{color:var(--text)}
-.booking-note span{display:block;margin-top:4px}
-.float{animation:float 5s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-8px)}}
-.reveal{opacity:0;transform:translateY(24px);transition:.65s}
-.reveal.show{opacity:1;transform:none}
-.mobileMenu{display:none}
-
-@media(max-width:1250px){
-  .dashboard{grid-template-columns:1fr 1fr}
-  .expertise{grid-template-columns:repeat(3,1fr)}
-  .service-grid,.booking-grid{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:850px){
-  .sidebar{transform:translateX(-100%);transition:.25s}
-  .sidebar.open{transform:none}
-  .main{margin-left:0;padding:14px}
-  .mobileMenu{
-    display:block;position:fixed;left:14px;top:14px;z-index:60;
-  }
-  .hero{grid-template-columns:1fr;padding:80px 12px 30px}
-  .hero h1{letter-spacing:-2px}
-  .dashboard{grid-template-columns:1fr}
-  .expertise{grid-template-columns:1fr 1fr}
-  .topbar{top:14px}
-  .quote{margin-top:25px}
-  .service-grid,.booking-grid{grid-template-columns:repeat(2,1fr)}
-  .service-cta{display:block}
-  .service-cta .btn{margin-top:12px}
-}
-@media(max-width:520px){
-  .expertise,.metric-grid,.client-grid,.cert-grid{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr 1fr}
-  .service-grid,.booking-grid{grid-template-columns:1fr}
-  .topbar .themeText{display:none}
-}
-
-.employer-logo{
-  width:62px;height:62px;border-radius:14px;margin:0 auto 12px;
-  display:grid;place-items:center;overflow:hidden;
-  background:#fff;border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 8px 24px rgba(0,0,0,.18);
-}
-.employer-logo svg{width:100%;height:100%;display:block}
-.employer-logo img{width:100%;height:100%;object-fit:contain;padding:8px}
-.node .employer-name{display:block;font-size:12px;font-weight:800;margin-top:8px}
-.node .employer-role{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-@media(max-width:1050px){
-  .sidebar{width:215px}
-  .main{margin-left:215px}
-  .hero{grid-template-columns:1fr}
-  .quote{max-width:900px;margin-top:15px}
-  .dashboard{grid-template-columns:1fr 1fr}
-  .service-grid,.booking-grid{grid-template-columns:repeat(2,1fr)}
+.logo.pyr{background:linear-gradient(135deg,#0879c9,#14539c)}
+.logo.ark{background:linear-gradient(135deg,#1f7fdf,#4a4de0)}
+.logo.pri{background:linear-gradient(135deg,#0b8b72,#0e5e8b)}
+.logo.kea{background:linear-gradient(135deg,#7b4dce,#c24b9b)}
+.logo.nlb{background:linear-gradient(135deg,#d92f2f,#ef8d22)}
+.logo.nr{background:linear-gradient(135deg,#273b8f,#3a78c5)}
+.job-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.job h3{margin:0;font-size:15px}.date{color:var(--cyan);font-size:10px;font-weight:850}.company{color:var(--blue);font-size:11px;font-weight:850;margin-top:2px}
+.job-summary{margin:8px 0 0;color:var(--muted);font-size:11px}
+.job-details{display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.job.open .job-details{display:block}.job-details ul{margin:0;padding-left:18px;color:var(--muted);font-size:10.5px}.job-details li{margin:4px 0}
+.job-toggle{margin-top:10px;padding:7px 9px;border-radius:9px;background:var(--surface);border:1px solid var(--line);color:var(--text);font-size:10px;font-weight:850;cursor:pointer}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:13px}
+.filter{border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:8px 10px;border-radius:999px;font-size:10px;font-weight:850;cursor:pointer}
+.filter.active{background:rgba(59,155,255,.12);border-color:rgba(59,155,255,.4);color:var(--text)}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.skill{padding:15px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+.skill h3{font-size:13px;margin:0 0 9px}.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tags span{padding:5px 7px;border-radius:7px;background:rgba(59,155,255,.08);border:1px solid var(--line);font-size:9.5px}
+.clients{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.client{padding:12px 8px;text-align:center;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.025);font-size:10px;font-weight:800}
+.services{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.service{padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);display:flex;flex-direction:column;min-height:180px}
+.service-icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(59,155,255,.11);color:var(--blue);font-weight:950;font-size:10px}
+.service h3{font-size:13px;margin:11px 0 5px}.service p{font-size:10px;color:var(--muted);margin:0}.service .btn{margin-top:auto;width:max-content}
+.cta{margin-top:12px;padding:18px;border:1px solid rgba(69,223,208,.18);border-radius:16px;background:rgba(69,223,208,.045);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cta b{display:block}.cta span{display:block;color:var(--muted);font-size:10px}
+.contact{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.contact a{padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--surface2)}
+.contact small{display:block;color:var(--muted);font-size:9px}.contact b{font-size:11px;overflow-wrap:anywhere}
+.cert{display:flex;flex-wrap:wrap;gap:7px}.cert span{padding:7px 9px;border:1px solid var(--line);border-radius:9px;background:var(--surface2);font-size:10px}
+footer{padding:28px 0 48px;text-align:center;color:var(--muted);font-size:10px}
+.reveal{opacity:0;transform:translateY(12px);transition:.55s}.reveal.show{opacity:1;transform:none}
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--violet));z-index:100;width:0}
+.backtop{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;display:none;z-index:30}
+.backtop.show{display:block}
+@media(max-width:1000px){
+ .nav{display:none}.menu{display:inline-flex}.top-inner{flex-wrap:wrap;padding:10px 0}.nav.open{display:flex;order:3;width:100%;flex-wrap:wrap;padding-bottom:4px}
+ .hero-grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .clients{grid-template-columns:repeat(3,minmax(0,1fr))}.services{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:700px){
-  .sidebar{width:270px}
-  .main{margin-left:0;padding:10px}
-  .topbar{padding-left:55px;justify-content:flex-end}
-  .hero{min-height:auto;padding:75px 18px 25px}
-  .hero h1{font-size:clamp(40px,13vw,62px)}
-  .hero p{font-size:15px}
-  .stats{grid-template-columns:1fr 1fr}
-  .dashboard,.service-grid,.booking-grid,.expertise{grid-template-columns:1fr}
-  .panel{padding:16px}
-  .head,.section-head{display:block}
-  .head p,.section-head p{margin-top:6px}
-  .timeline{padding-bottom:16px}
-  .node{min-width:175px}
-  .node:not(:last-child):after{width:70%}
-  .service-card,.booking-card{min-height:220px}
-  .service-cta{display:block}
+ .container{width:min(100% - 20px,var(--max))}.hero{padding-top:40px}.section{padding:17px;margin:12px 0}
+ h1{font-size:45px;letter-spacing:-2.5px}.lead{font-size:15px}.grid2,.skills{grid-template-columns:1fr}
+ .clients{grid-template-columns:repeat(2,minmax(0,1fr))}.services{grid-template-columns:1fr}.contact{grid-template-columns:1fr 1fr}
+ .timeline:before{left:28px}.job{grid-template-columns:54px minmax(0,1fr)}.logo{width:48px;height:48px;font-size:9px}
+ .cta{display:block}.cta .btn{margin-top:10px}.actions .cv{display:none}
 }
-@media(max-width:420px){
-  .topbar .btn{padding:9px 10px;font-size:12px}
-  .hero h1{letter-spacing:-1.5px}
-  .stats{gap:8px}
-  .stat strong{font-size:20px}
-  .chip{font-size:11px}
-  .employer-logo{width:54px;height:54px}
+@media(max-width:430px){
+ .brand span{font-size:13px}.actions .btn{padding:9px}.contact{grid-template-columns:1fr}.stats{gap:5px}.stat{padding:9px}.stat strong{font-size:18px}
 }
-
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}}
 </style>
 </head>
-
 <body>
+<div class="progress" id="progress"></div>
 
-<button class="btn mobileMenu" id="mobileMenu" aria-label="Open menu">☰</button>
-
-<aside class="sidebar">
-  <div class="profile">
-    <div class="avatar" aria-label="Akhilesh Tiwari">AT</div>
-    <h2>Akhilesh Tiwari</h2>
-    <p>Senior Technical Recruiter</p>
-  </div>
-
-  <nav class="nav" aria-label="Main navigation">
-    <a href="#home" class="active">⌂ &nbsp; Home</a>
-    <a href="#journey">↗ &nbsp; Career Journey</a>
-    <a href="#stack">◉ &nbsp; Tech Stack Map</a>
-    <a href="#clients">▦ &nbsp; Client Portfolio</a>
-    <a href="#analytics">⌁ &nbsp; Analytics Project</a>
-    <a href="#metrics">▥ &nbsp; Metrics Dashboard</a>
-    <a href="#certs">◇ &nbsp; Certifications</a>
-    <a href="#contact">✉ &nbsp; Contact</a>
+<header class="top">
+ <div class="container top-inner">
+  <a class="brand" href="#home"><span class="brand-mark">AT</span><span>Akhilesh Tiwari</span></a>
+  <button class="btn menu" id="menuBtn" type="button">☰ Menu</button>
+  <nav class="nav" id="nav" aria-label="Primary navigation">
+   <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
+   <a href="#clients">Clients</a><a href="#services">Services</a><a href="#contact">Contact</a>
   </nav>
-
-  <div class="contact" id="contact">
-    <b>Let's Connect</b>
-    <p>☎ <a href="tel:+919310038984">+91-9310038984</a></p>
-    <p>✉ <a href="mailto:akhileshtiwari248@gmail.com">akhileshtiwari248@gmail.com</a></p>
-    <p>⌖ Noida, India</p>
-    <p>in <a href="https://www.linkedin.com/in/akhi248/" target="_blank" rel="noopener">linkedin.com/in/akhi248/</a></p>
+  <div class="actions">
+   <button class="btn" id="themeBtn" type="button">☾ Theme</button>
+   <a class="btn primary cv" href="Akhilesh_Tiwari_CV[1].pdf" download>⇩ CV</a>
   </div>
-</aside>
+ </div>
+</header>
 
-<main class="main">
-
-  <div class="topbar">
-    <button class="btn" id="themeBtn">☀ <span class="themeText">Light</span></button>
-    <a class="btn primary" href="Akhilesh_Tiwari_CV[1].pdf" download>⇩ Download CV</a>
+<main class="container">
+<section class="hero" id="home">
+ <div class="hero-grid">
+  <div class="reveal">
+   <span class="eyebrow">Talent • Technology • Data</span>
+   <h1>Connecting Talent.<br><span class="grad">Driving Impact.</span></h1>
+   <p class="lead"><b>Senior Executive Resourcing | Technical Recruiting | Data, AI & Analytics</b></p>
+   <p class="lead">Nearly 7 years supporting enterprise hiring across Direct, MSP and VMS environments, specializing in Cloud, Data Engineering, Cybersecurity, ERP, Software Development and Enterprise Applications.</p>
+   <div class="chips">
+    <span class="chip">♙ Talent Acquisition</span><span class="chip">⌕ Advanced Sourcing</span><span class="chip">▣ Data Driven</span>
+    <span class="chip">AI-Assisted Recruiting</span><span class="chip">BFSI • Telecom • Airlines</span>
+   </div>
+   <div class="hero-actions">
+    <a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">📅 Schedule a Meeting</a>
+    <a class="btn" href="https://www.linkedin.com/in/akhi248/" target="_blank" rel="noopener">in LinkedIn</a>
+    <a class="btn" href="mailto:akhileshtiwari248@gmail.com">✉ Email Me</a>
+   </div>
   </div>
+  <aside class="hero-card reveal">
+   <div class="avatar">AT</div>
+   <h2>Akhilesh Tiwari</h2>
+   <p>Senior Executive Resourcing</p><p>Noida, India</p>
+   <span class="status"><span class="dot"></span> Open to professional conversations</span>
+   <div class="stats">
+    <div class="stat"><strong>7+</strong><span>Years</span></div><div class="stat"><strong>14+</strong><span>Direct Clients</span></div><div class="stat"><strong>6</strong><span>Employers</span></div>
+   </div>
+  </aside>
+ </div>
+</section>
 
-  <section class="hero section" id="home">
-    <div class="reveal">
-      <small class="grad"><b>TALENT • TECHNOLOGY • DATA</b></small>
-      <h1>Connecting Talent.<br><span class="grad">Driving Impact.</span></h1>
-      <p><b>Senior Technical Recruiter | Data, AI & Analytics Talent Specialist</b></p>
-      <p>Nearly 7 years of experience delivering technical talent across Direct, MSP and VMS environments for enterprise clients, paired with hands-on marketing analytics experience.</p>
+<section class="section reveal" id="about">
+ <div class="section-head"><div><span class="eyebrow">Profile</span><h2>Professional Snapshot</h2></div><p>Recruiting + technology + analytics</p></div>
+ <div class="grid grid2">
+  <div class="card"><h3>What I Do</h3><p>Own top-of-funnel sourcing, build proactive talent pipelines, execute high-volume outbound sourcing and engage passive candidates using Boolean, X-Ray, LinkedIn Recruiter and AI-assisted techniques.</p></div>
+  <div class="card"><h3>How I Work</h3><p>Focus on domain alignment, technical-stack fit, candidate credibility, work authorization, long-term stability and hiring-manager partnership.</p></div>
+  <div class="card"><h3>Recruitment Models</h3><p>W2, C2C and FTE hiring, with Direct Client, MSP and VMS delivery experience. Current work includes Magnit, AgileOne, Workday VNDLY and Simplify VMS.</p></div>
+  <div class="card"><h3>Education</h3><p><b>B.Tech, Computer Science Engineering</b><br>Chandrasekhar Azad University, 2019.</p></div>
+ </div>
+</section>
 
-      <div class="chips">
-        <span class="chip">♙ Talent Acquisition</span>
-        <span class="chip">⌕ Sourcing Expert</span>
-        <span class="chip">▣ Data Driven</span>
-        <span class="chip">♧ People Partner</span>
-      </div>
+<section class="section reveal" id="experience">
+ <div class="section-head"><div><span class="eyebrow">Career Journey</span><h2>Experience</h2></div><p>Click a role to expand details</p></div>
+ <div class="timeline">
+  <article class="job open">
+   <div class="logo pyr">PYR</div><div><div class="job-top"><h3>Senior Executive Resourcing</h3><span class="date">Sep 2025 – Present</span></div><div class="company">Pyramid Consulting • Noida</div>
+   <p class="job-summary">Enterprise recruiting across W2, C2C and FTE models for major technology and business clients.</p>
+   <div class="job-details"><ul><li>AI/ML, Cloud, Data Engineering, Cybersecurity, ERP, Product and Software Engineering.</li><li>Magnit, AgileOne, Workday VNDLY and Simplify VMS workflows.</li><li>High-volume sourcing through LinkedIn Recruiter, Boolean, X-Ray, Dice, Tech-Fetch and GitHub.</li><li>Candidate evaluation, rate negotiation, onboarding, market intelligence and recruitment metrics.</li></ul></div>
+   <button class="job-toggle" type="button">Hide details</button></div>
+  </article>
+  <article class="job">
+   <div class="logo ark">ARK</div><div><div class="job-top"><h3>Senior Technical Recruiter</h3><span class="date">Dec 2024 – Aug 2025</span></div><div class="company">ARK Solutions • Noida</div>
+   <p class="job-summary">Technical recruiting for State Government agencies and Direct Clients across Cloud, DevOps, Data Engineering, Cybersecurity, SAP, ERP and Software Development.</p>
+   <div class="job-details"><ul><li>State Government and Direct Client recruiting exposure.</li><li>Cloud, DevOps, Data Engineering, Cybersecurity, SAP, ERP and Software Development hiring.</li></ul></div>
+   <button class="job-toggle" type="button">View details</button></div>
+  </article>
+  <article class="job">
+   <div class="logo pri">PRI</div><div><div class="job-top"><h3>Senior Technical Recruiter</h3><span class="date">Feb 2024 – Sep 2024</span></div><div class="company">Primus Global Services • Noida</div>
+   <p class="job-summary">Full-cycle IT and Non-IT recruitment across contract, contract-to-hire and full-time requirements, including team mentoring and ATS/reporting ownership.</p>
+   <div class="job-details"><ul><li>Full-cycle IT and Non-IT recruitment.</li><li>Contract, contract-to-hire and full-time hiring.</li><li>Team mentoring and ATS/reporting ownership.</li></ul></div>
+   <button class="job-toggle" type="button">View details</button></div>
+  </article>
+  <article class="job">
+   <div class="logo kea">KEA</div><div><div class="job-top"><h3>Senior Technical Recruiter</h3><span class="date">Feb 2023 – Jan 2024</span></div><div class="company">Keasis Inc. • Noida</div>
+   <p class="job-summary">Led end-to-end recruitment for an emerging IT staffing firm and mentored a team of 4–5 recruiters while supporting client delivery and repeat business.</p>
+   <div class="job-details"><ul><li>End-to-end recruitment leadership.</li><li>Mentored a team of 4–5 recruiters.</li><li>Supported client delivery and repeat business.</li></ul></div>
+   <button class="job-toggle" type="button">View details</button></div>
+  </article>
+  <article class="job">
+   <div class="logo nlb">NLB</div><div><div class="job-top"><h3>Technical Recruiter</h3><span class="date">Feb 2021 – Jan 2023</span></div><div class="company">NLB Services • Noida</div>
+   <p class="job-summary">Full-cycle technical recruitment for Direct Clients, with niche sourcing, work-authorization validation, compensation negotiation and ATS tracking.</p>
+   <div class="job-details"><ul><li>Direct Client technical recruitment.</li><li>Niche sourcing and work-authorization validation.</li><li>Compensation negotiation and ATS tracking.</li></ul></div>
+   <button class="job-toggle" type="button">View details</button></div>
+  </article>
+  <article class="job">
+   <div class="logo nr">NR</div><div><div class="job-top"><h3>Technical Recruiter</h3><span class="date">Aug 2019 – Jan 2021</span></div><div class="company">NR Consulting Service • Noida</div>
+   <p class="job-summary">Built foundational recruiting processes, sourced technical talent, prepared consultants for interviews and managed the recruitment lifecycle through onboarding.</p>
+   <div class="job-details"><ul><li>Built foundational recruiting processes.</li><li>Sourced technical talent and prepared consultants for interviews.</li><li>Managed recruitment lifecycle through onboarding.</li></ul></div>
+   <button class="job-toggle" type="button">View details</button></div>
+  </article>
+ </div>
+</section>
 
-      <a class="btn primary" href="#journey">Explore Journey ↓</a>
-    </div>
+<section class="section reveal" id="skills">
+ <div class="section-head"><div><span class="eyebrow">Capabilities</span><h2>Skills & Technology Coverage</h2></div><p>Filter the capability map</p></div>
+ <div class="filters" id="skillFilters">
+  <button class="filter active" type="button" data-filter="all">All</button>
+  <button class="filter" type="button" data-filter="recruitment">Recruitment</button>
+  <button class="filter" type="button" data-filter="sourcing">Sourcing</button>
+  <button class="filter" type="button" data-filter="systems">ATS / VMS</button>
+  <button class="filter" type="button" data-filter="tech">Technology</button>
+  <button class="filter" type="button" data-filter="industry">Industry</button>
+  <button class="filter" type="button" data-filter="analytics">AI & Analytics</button>
+ </div>
+ <div class="skills">
+  <div class="skill" data-cat="recruitment"><h3>Recruitment</h3><div class="tags"><span>End-to-End Hiring</span><span>Technical Screening</span><span>Candidate Assessment</span><span>Onboarding</span><span>Team Management</span></div></div>
+  <div class="skill" data-cat="sourcing"><h3>Sourcing</h3><div class="tags"><span>Boolean</span><span>X-Ray</span><span>LinkedIn Recruiter</span><span>GitHub</span><span>Referrals</span><span>Market Mapping</span></div></div>
+  <div class="skill" data-cat="systems"><h3>ATS / VMS</h3><div class="tags"><span>Ceipal</span><span>JobDiva</span><span>Magnit</span><span>AgileOne</span><span>VNDLY</span><span>Simplify VMS</span><span>Beeline</span><span>Fieldglass</span></div></div>
+  <div class="skill" data-cat="tech"><h3>Technology Domains</h3><div class="tags"><span>AI / ML</span><span>Cloud</span><span>Data Engineering</span><span>Cybersecurity</span><span>SAP</span><span>ERP</span><span>Software Engineering</span></div></div>
+  <div class="skill" data-cat="industry"><h3>Industry Knowledge</h3><div class="tags"><span>BFSI</span><span>Telecom</span><span>Engineering</span><span>Pharma Manufacturing</span><span>Airlines</span><span>Retail</span><span>Hospitality</span></div></div>
+  <div class="skill" data-cat="analytics"><h3>AI & Analytics</h3><div class="tags"><span>ChatGPT</span><span>Claude</span><span>Google Analytics</span><span>Search Ads 360</span><span>Python</span><span>Tableau</span><span>Data Analysis</span></div></div>
+ </div>
+</section>
 
-    <div class="quote float reveal">
-      <q>I bridge the gap between <span class="grad">great talent</span> and great opportunities.</q>
+<section class="section reveal" id="clients">
+ <div class="section-head"><div><span class="eyebrow">Enterprise Exposure</span><h2>Clients Served</h2></div><p>Selected client / prime-vendor exposure</p></div>
+ <div class="clients">
+  <div class="client">Delta Airlines</div><div class="client">LexisNexis</div><div class="client">Inspire Brands</div><div class="client">Global Payments</div><div class="client">Nexus Circular</div>
+  <div class="client">Bloomberg</div><div class="client">Swiss Re</div><div class="client">Synchrony Financial</div><div class="client">Exxon Mobil</div><div class="client">Willis Towers Watson</div>
+  <div class="client">NCR Corp</div><div class="client">Morgan Stanley</div><div class="client">JPMC</div><div class="client">Motorola Solutions</div><div class="client">Kforce</div>
+  <div class="client">TEKsystems</div><div class="client">Apex</div>
+ </div>
+ <p style="color:var(--muted);font-size:10px;margin-bottom:0">Direct-client and prime-vendor exposure is documented in the profile.</p>
+</section>
 
-      <div class="stats">
-        <div class="stat">
-          <strong class="counter" data-target="100" data-suffix="+">0</strong>
-          <span>Placements</span>
-        </div>
-        <div class="stat">
-          <strong class="counter" data-target="2000" data-suffix="+">0</strong>
-          <span>Submissions</span>
-        </div>
-        <div class="stat">
-          <strong class="counter" data-target="500" data-suffix="+">0</strong>
-          <span>Interviews</span>
-        </div>
-        <div class="stat">
-          <strong class="counter" data-target="150">0</strong>
-          <span>Offers</span>
-        </div>
-      </div>
+<section class="section reveal" id="services">
+ <div class="section-head"><div><span class="eyebrow">Professional Services</span><h2>How I Can Help</h2></div><p>Conversation-ready service areas</p></div>
+ <div class="services">
+  <article class="service"><div class="service-icon">AI</div><h3>AI/ML Hiring</h3><p>GenAI, AI/ML, data and emerging technology talent acquisition.</p><a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">Schedule →</a></article>
+  <article class="service"><div class="service-icon">⌘</div><h3>Technical Hiring</h3><p>Cloud, DevOps, Data Engineering, Cybersecurity, ERP and Software hiring.</p><a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">Schedule →</a></article>
+  <article class="service"><div class="service-icon">RPO</div><h3>Recruitment RPO</h3><p>Sourcing capacity, pipeline building and recruitment workflow support.</p><a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">Schedule →</a></article>
+  <article class="service"><div class="service-icon">▥</div><h3>Data Analytics</h3><p>Data preparation, KPI reporting, marketing analytics and dashboard support.</p><a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">Schedule →</a></article>
+  <article class="service"><div class="service-icon">✦</div><h3>Career Consulting</h3><p>Resume review, resume creation, sourcing visibility and career-document support.</p><a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">Schedule →</a></article>
+ </div>
+ <div class="cta"><div><b>Have a project or hiring requirement?</b><span>Choose a convenient time through my Google Calendar booking page.</span></div><a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">📅 Schedule a Meeting</a></div>
+</section>
 
-      <div class="stats">
-        <div class="stat">
-          <strong>14+</strong>
-          <span>Named Direct Clients</span>
-        </div>
-        <div class="stat">
-          <strong>6</strong>
-          <span>Recruiting Organizations</span>
-        </div>
-        <div class="stat">
-          <strong>7+</strong>
-          <span>Years Experience</span>
-        </div>
-        <div class="stat">
-          <strong>USA</strong>
-          <span>Primary Market</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section reveal" id="education">
+ <div class="section-head"><div><span class="eyebrow">Credentials</span><h2>Education & Certifications</h2></div></div>
+ <div class="grid grid2">
+  <div class="card"><h3>B.Tech in Computer Science Engineering</h3><p>Chandrasekhar Azad University • 2019.</p></div>
+  <div class="card"><h3>Certifications</h3><div class="cert">
+   <span>Anthropic Claude suite</span><span>Oracle OCI 2023 AI Foundations</span><span>DevSkiller TRCP</span><span>Hirist Certified Technical Recruiter</span><span>Google Analytics</span><span>Search Ads 360</span><span>HackerRank Python Basic & Intermediate</span><span>Data Science & Python Development</span><span>Certified Java Developer</span>
+  </div></div>
+ </div>
+</section>
 
-  <section class="panel section reveal" id="journey">
-    <div class="head">
-      <h2>My Career Journey: <span class="grad">Recruiter to Analyst</span></h2>
-      <p>Scroll horizontally on smaller screens →</p>
-    </div>
+<section class="section reveal" id="contact">
+ <div class="section-head"><div><span class="eyebrow">Let's Connect</span><h2>Start a Conversation</h2></div><p>Recruiting • Analytics • Career conversations</p></div>
+ <div class="contact">
+  <a href="mailto:akhileshtiwari248@gmail.com"><small>Email</small><b>akhileshtiwari248@gmail.com</b></a>
+  <a href="tel:+919310038984"><small>Phone</small><b>+91-9310038984</b></a>
+  <a href="https://www.linkedin.com/in/akhi248/" target="_blank" rel="noopener"><small>LinkedIn</small><b>linkedin.com/in/akhi248</b></a>
+  <a href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener"><small>Meeting</small><b>Book a Google Meet</b></a>
+ </div>
+</section>
 
-    <div class="timeline">
-      <div class="node">
-        <div class="employer-logo" title="NR Consulting">
-          <svg viewBox="0 0 120 120" role="img" aria-label="NR Consulting logo">
-            <rect width="120" height="120" rx="18" fill="#fff"/>
-            <text x="12" y="68" font-size="48" font-weight="900" font-style="italic" fill="#f05a28">NR</text>
-            <text x="62" y="55" font-size="13" font-weight="800" fill="#111">CONSULTING</text>
-            <text x="62" y="72" font-size="7" fill="#555">Candidates. Companies.</text>
-          </svg>
-        </div>
-        <b>Aug 2019 – Jan 2021</b>
-        <span class="employer-role">Technical Recruiter</span>
-        <span class="employer-name">NR Consulting Service</span>
-      </div>
-
-      <div class="node">
-        <div class="employer-logo" title="NLB Services">
-          <svg viewBox="0 0 120 120" role="img" aria-label="NLB Services logo">
-            <rect width="120" height="120" rx="18" fill="#fff"/>
-            <path d="M17 67 L17 45 L30 32 L30 67 Z" fill="#b9d600"/>
-            <text x="34" y="70" font-size="35" font-weight="700" fill="#747474">nlb</text>
-            <text x="34" y="87" font-size="13" font-weight="600" fill="#777">services</text>
-          </svg>
-        </div>
-        <b>Feb 2021 – Feb 2023</b>
-        <span class="employer-role">Technical Recruiter</span>
-        <span class="employer-name">NLB Services</span>
-      </div>
-
-      <div class="node">
-        <div class="employer-logo" title="Keasis">
-          <svg viewBox="0 0 120 120" role="img" aria-label="Keasis logo">
-            <rect width="120" height="120" rx="18" fill="#101820"/>
-            <circle cx="60" cy="45" r="22" fill="#1ec8c8" opacity=".95"/>
-            <path d="M45 45 L57 32 L57 40 L72 30 L72 45 L58 57 L58 68 L45 68 Z" fill="#fff"/>
-            <text x="60" y="93" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">KEASIS</text>
-          </svg>
-        </div>
-        <b>Feb 2023 – Jan 2024</b>
-        <span class="employer-role">Senior Technical Recruiter</span>
-        <span class="employer-name">Keasis Inc.</span>
-      </div>
-
-      <div class="node analytics">
-        <div class="employer-logo" title="Marketing Analytics Project">
-          <svg viewBox="0 0 120 120" role="img" aria-label="Marketing Analytics Project">
-            <rect width="120" height="120" rx="18" fill="#07182a"/>
-            <rect x="20" y="61" width="14" height="30" rx="3" fill="#48dfd0"/>
-            <rect x="43" y="46" width="14" height="45" rx="3" fill="#3798ff"/>
-            <rect x="66" y="32" width="14" height="59" rx="3" fill="#9b5cff"/>
-            <path d="M19 38 C43 25 61 52 92 22" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="92" cy="22" r="5" fill="#fff"/>
-          </svg>
-        </div>
-        <b>May 2023 – Feb 2024</b>
-        <span class="employer-role">Marketing Data Analyst</span>
-        <span class="employer-name">Freelance Project</span>
-      </div>
-
-      <div class="node">
-        <div class="employer-logo" title="Primus Global Services">
-          <svg viewBox="0 0 120 120" role="img" aria-label="Primus Global Services logo">
-            <rect width="120" height="120" rx="18" fill="#fff"/>
-            <text x="60" y="51" text-anchor="middle" font-size="23" font-weight="800" fill="#8d0808">PRIMUS</text>
-            <path d="M18 59 H102" stroke="#aaa" stroke-width="2"/>
-            <text x="60" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#555">GLOBAL SERVICES</text>
-          </svg>
-        </div>
-        <b>Jan 2024 – Dec 2024</b>
-        <span class="employer-role">Senior Technical Recruiter</span>
-        <span class="employer-name">Primus Global Services</span>
-      </div>
-
-      <div class="node">
-        <div class="employer-logo" title="ARK Solutions">
-          <svg viewBox="0 0 120 120" role="img" aria-label="ARK Solutions logo">
-            <rect width="120" height="120" rx="18" fill="#fff"/>
-            <text x="60" y="57" text-anchor="middle" font-size="40" font-weight="900" fill="#4e8f21">ARK</text>
-            <text x="60" y="76" text-anchor="middle" font-size="10" font-weight="800" fill="#14619a">SOLUTIONS</text>
-            <circle cx="30" cy="92" r="4" fill="#14619a"/><circle cx="60" cy="92" r="4" fill="#4e8f21"/><circle cx="90" cy="92" r="4" fill="#14619a"/>
-          </svg>
-        </div>
-        <b>Dec 2024 – Aug 2025</b>
-        <span class="employer-role">Senior Technical Recruiter</span>
-        <span class="employer-name">ARK Solutions</span>
-      </div>
-
-      <div class="node">
-        <div class="employer-logo" title="Pyramid Consulting">
-          <svg viewBox="0 0 120 120" role="img" aria-label="Pyramid Consulting logo">
-            <rect width="120" height="120" rx="18" fill="#fff"/>
-            <path d="M18 44 L31 23 L44 44 Z" fill="#f0b52b"/>
-            <path d="M23 44 L31 31 L36 44 Z" fill="#273069"/>
-            <text x="48" y="48" font-size="22" font-weight="900" fill="#272565">pyramid</text>
-            <text x="49" y="67" font-size="10" font-weight="800" fill="#e1a72b">CONSULTING</text>
-          </svg>
-        </div>
-        <b>Sep 2025 – Present</b>
-        <span class="employer-role">Senior Executive Resourcing</span>
-        <span class="employer-name">Pyramid Consulting</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="dashboard">
-
-    <section class="panel section reveal" id="stack">
-      <h3>Tech Stack Map</h3>
-      <div class="wheel"></div>
-      <div class="chips">
-        <span class="chip">Cloud</span>
-        <span class="chip">Data & AI</span>
-        <span class="chip">Cybersecurity</span>
-        <span class="chip">ERP</span>
-        <span class="chip">Software Eng.</span>
-        <span class="chip">Databases</span>
-      </div>
-    </section>
-
-    <section class="panel section reveal" id="clients">
-      <h3>Client Portfolio</h3>
-      <div class="client-grid">
-        <div class="tile">Delta Airlines</div>
-        <div class="tile">LexisNexis</div>
-        <div class="tile">Inspire Brands</div>
-        <div class="tile">Global Payments</div>
-        <div class="tile">Nexus Circular</div>
-        <div class="tile">Bloomberg</div>
-        <div class="tile">Swiss Re</div>
-        <div class="tile">Synchrony Financial</div>
-        <div class="tile">Exxon Mobil</div>
-        <div class="tile">WTW</div>
-        <div class="tile">NCR Corp</div>
-        <div class="tile">Morgan Stanley</div>
-        <div class="tile">JPMC</div>
-        <div class="tile">Motorola Solutions</div>
-      </div>
-      <div class="chips">
-        <span class="chip">Prime: Kforce</span>
-        <span class="chip">TEKsystems</span>
-        <span class="chip">Apex</span>
-      </div>
-    </section>
-
-    <section class="panel section reveal" id="metrics">
-      <h3>Recruitment Metrics Dashboard</h3>
-      <div class="interactive-note">Historical portfolio metrics supplied by Akhilesh. Designed for recruiter and client storytelling.</div>
-
-      <div class="metric-grid">
-        <div class="metric">
-          <span>Focus</span>
-          <strong>Quality</strong>
-          <span>Targeted pipelines</span>
-        </div>
-        <div class="metric">
-          <span>Coverage</span>
-          <strong>W2/C2C/FTE</strong>
-          <span>Hiring models</span>
-        </div>
-        <div class="metric">
-          <span>Workflow</span>
-          <strong>VMS/MSP</strong>
-          <span>Enterprise delivery</span>
-        </div>
-        <div class="metric">
-          <span>Insight</span>
-          <strong>Data-led</strong>
-          <span>Market intelligence</span>
-        </div>
-      </div>
-
-      <div class="bars">
-        <div class="bar">
-          <span>Data Engineering</span>
-          <div class="track"><div class="fill" style="width:94%"></div></div>
-          <b>Core</b>
-        </div>
-        <div class="bar">
-          <span>Cloud / DevOps</span>
-          <div class="track"><div class="fill" style="width:91%"></div></div>
-          <b>Core</b>
-        </div>
-        <div class="bar">
-          <span>Cybersecurity</span>
-          <div class="track"><div class="fill" style="width:88%"></div></div>
-          <b>Core</b>
-        </div>
-        <div class="bar">
-          <span>AI / ML</span>
-          <div class="track"><div class="fill" style="width:86%"></div></div>
-          <b>Core</b>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel section reveal" id="booking-services">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Talent & Consulting</span>
-          <h2>Book a Conversation</h2>
-        </div>
-        <p>Each card can later receive its own booking URL.</p>
-      </div>
-
-      <div class="booking-grid">
-        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="AI/ML Hiring">
-          <span class="booking-icon">AI</span>
-          <div>
-            <h3>AI/ML Hiring</h3>
-            <p>GenAI, LLM, Agentic AI, MLOps, AI Security and AI/Data talent acquisition.</p>
-          </div>
-          <b>Book a Conversation →</b>
-        </a>
-
-        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="Technical Hiring">
-          <span class="booking-icon">⌘</span>
-          <div>
-            <h3>Technical Hiring</h3>
-            <p>Software, Cloud, DevOps, Data Engineering, Cybersecurity and enterprise technology hiring.</p>
-          </div>
-          <b>Book a Conversation →</b>
-        </a>
-
-        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="Recruitment RPO">
-          <span class="booking-icon">RPO</span>
-          <div>
-            <h3>Recruitment RPO</h3>
-            <p>Flexible recruiting support, sourcing capacity, pipeline building and recruitment operations.</p>
-          </div>
-          <b>Book a Conversation →</b>
-        </a>
-
-        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="Data Analytics">
-          <span class="booking-icon">▥</span>
-          <div>
-            <h3>Data Analytics</h3>
-            <p>Marketing analytics, data preparation, KPI reporting, Tableau dashboards and insights.</p>
-          </div>
-          <b>Book a Conversation →</b>
-        </a>
-
-        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="Consulting">
-          <span class="booking-icon">✦</span>
-          <div>
-            <h3>Consulting</h3>
-            <p>Talent strategy, sourcing strategy, recruiting workflows, career documents and data projects.</p>
-          </div>
-          <b>Book a Conversation →</b>
-        </a>
-      </div>
-
-      <div class="booking-note">
-        <b>Direct scheduling:</b> Each service can have its own Calendly, Google Calendar, Microsoft Bookings or Cal.com URL.
-        <span>Clicking a booking card opens my Google Calendar scheduling page so you can choose an available time.</span>
-      </div>
-    </section>
-
-    <section class="panel section reveal" id="services">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">Professional Services</span>
-          <h2>How I Can Help</h2>
-        </div>
-        <p>Practical recruiting, career-document and data services.</p>
-      </div>
-
-      <div class="service-grid">
-        <article class="service-card">
-          <div class="service-icon">CV</div>
-          <h3>Resume Review</h3>
-          <p>Detailed review of your resume for structure, clarity, positioning, ATS alignment and role-specific keyword coverage.</p>
-          <a class="btn service-btn" href="#contact">Discuss Resume Review →</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">✦</div>
-          <h3>Resume Creation</h3>
-          <p>Professionally structured resumes tailored around your experience, target role, achievements and recruiter-search visibility.</p>
-          <a class="btn service-btn" href="#contact">Discuss Resume Creation →</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">↯</div>
-          <h3>Data Cleaning</h3>
-          <p>Clean, validate, standardize and organize messy datasets so they are ready for analysis, reporting and decision-making.</p>
-          <a class="btn service-btn" href="#contact">Discuss Data Cleaning →</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">⌁</div>
-          <h3>Data Scraping</h3>
-          <p>Collect structured information from public web sources and transform it into usable datasets for research and analysis.</p>
-          <a class="btn service-btn" href="#contact">Discuss Data Scraping →</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">▥</div>
-          <h3>Dashboard Creation</h3>
-          <p>Build interactive, decision-focused dashboards and visual reports using analytics workflows and tools such as Tableau.</p>
-          <a class="btn service-btn" href="#contact">Discuss Dashboard →</a>
-        </article>
-      </div>
-
-      <div class="service-cta">
-        <div>
-          <b>Have a project in mind?</b>
-          <span>Schedule a conversation and let's define the scope, deliverables and timeline.</span>
-        </div>
-        <a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">Schedule a Meeting →</a>
-      </div>
-    </section>
-
-    <section class="panel section reveal" id="certs">
-      <h3>Certification Wall</h3>
-      <div class="cert-grid">
-        <div class="tile">Anthropic Claude Suite</div>
-        <div class="tile">Oracle OCI 2023 AI Foundations</div>
-        <div class="tile">DevSkiller TRCP</div>
-        <div class="tile">Hirist Technical Recruiter</div>
-        <div class="tile">Google Analytics</div>
-        <div class="tile">Search Ads 360</div>
-        <div class="tile">HackerRank Python Basic</div>
-        <div class="tile">HackerRank Python Intermediate</div>
-        <div class="tile">Data Science & Python</div>
-        <div class="tile">Certified Java Developer</div>
-      </div>
-    </section>
-
-  </div>
-
-  <section class="panel section reveal" id="analytics">
-    <div class="head">
-      <h2>Marketing Data Analyst <span class="grad">Freelance Project</span></h2>
-      <p>May 2023 – Feb 2024 • Remote • United States</p>
-    </div>
-
-    <div class="expertise">
-      <div class="expert">
-        <b>Tableau Dashboards</b>
-        <p>KPIs, revenue, acquisition and campaign effectiveness.</p>
-      </div>
-      <div class="expert">
-        <b>Customer Segmentation</b>
-        <p>Demographics, booking behavior, preferences and CLV.</p>
-      </div>
-      <div class="expert">
-        <b>Campaign Analytics</b>
-        <p>Email, paid media, website and social performance.</p>
-      </div>
-      <div class="expert">
-        <b>Experimentation</b>
-        <p>A/B testing, funnels and customer journey analysis.</p>
-      </div>
-      <div class="expert">
-        <b>GA4 + CRM</b>
-        <p>Engagement, attribution, retention and marketing effectiveness.</p>
-      </div>
-      <div class="expert">
-        <b>AI Productivity</b>
-        <p>Copilot, Claude and Gemini for analysis and reporting.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel section reveal" id="expertise">
-    <h3>Recruitment Expertise Highlights</h3>
-    <div class="expertise">
-      <div class="expert">
-        <b>Advanced Sourcing</b>
-        <p>Boolean • X-Ray • LinkedIn RPS • GitHub • AI-assisted sourcing</p>
-      </div>
-      <div class="expert">
-        <b>End-to-End Hiring</b>
-        <p>Screening • evaluations • offers • onboarding</p>
-      </div>
-      <div class="expert">
-        <b>VMS / ATS</b>
-        <p>Magnit • AgileOne • VNDLY • Simplify • JobDiva • Ceipal</p>
-      </div>
-      <div class="expert">
-        <b>Domains</b>
-        <p>BFSI • Telecom • Engineering • Airlines • Retail • Pharma</p>
-      </div>
-      <div class="expert">
-        <b>Partnerships</b>
-        <p>Stakeholders • mentorship • candidate relationships</p>
-      </div>
-      <div class="expert">
-        <b>Data Driven</b>
-        <p>Market intelligence • salary benchmarks • metrics • reporting</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel section reveal">
-    <div class="head">
-      <h2>Let's <span class="grad">Connect</span></h2>
-      <p>Open to recruiting, analytics and consulting conversations.</p>
-    </div>
-
-    <div class="chips">
-      <a class="chip" href="mailto:akhileshtiwari248@gmail.com">✉ Email Me</a>
-      <a class="chip" href="tel:+919310038984">☎ Call Me</a>
-      <a class="chip" href="https://www.linkedin.com/in/akhi248/" target="_blank" rel="noopener">in LinkedIn</a>
-    </div>
-  </section>
-
+<footer>© 2026 Akhilesh Tiwari • Talent Acquisition • Data • AI & Analytics</footer>
 </main>
+
+<button class="backtop" id="backtop" type="button" aria-label="Back to top">↑</button>
 
 <script>
 (function(){
-  "use strict";
+ const root=document.documentElement;
+ const themeBtn=document.getElementById('themeBtn');
+ const menuBtn=document.getElementById('menuBtn');
+ const nav=document.getElementById('nav');
+ const progress=document.getElementById('progress');
+ const backtop=document.getElementById('backtop');
 
-  const root = document.documentElement;
-  const themeBtn = document.getElementById("themeBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const sidebar = document.querySelector(".sidebar");
+ themeBtn.addEventListener('click',function(){
+   const light=root.dataset.theme==='light';
+   root.dataset.theme=light?'dark':'light';
+   themeBtn.textContent=light?'☾ Theme':'☀ Light';
+ });
 
-  /* Theme toggle */
-  if(themeBtn){
-    themeBtn.addEventListener("click", function(){
-      const isLight = root.dataset.theme === "light";
-      root.dataset.theme = isLight ? "dark" : "light";
-      themeBtn.innerHTML = isLight
-        ? '☀ <span class="themeText">Light</span>'
-        : '☾ <span class="themeText">Dark</span>';
-    });
-  }
+ menuBtn.addEventListener('click',function(){nav.classList.toggle('open');});
+ nav.querySelectorAll('a').forEach(function(a){
+   a.addEventListener('click',function(){nav.classList.remove('open');});
+ });
 
-  /* Mobile menu */
-  if(mobileMenu && sidebar){
-    mobileMenu.addEventListener("click", function(){
-      sidebar.classList.toggle("open");
-    });
+ document.querySelectorAll('.job').forEach(function(job){
+   const btn=job.querySelector('.job-toggle');
+   btn.addEventListener('click',function(){
+     const open=job.classList.toggle('open');
+     btn.textContent=open?'Hide details':'View details';
+   });
+ });
 
-    document.querySelectorAll(".nav a").forEach(function(link){
-      link.addEventListener("click", function(){
-        sidebar.classList.remove("open");
-      });
-    });
-  }
+ document.querySelectorAll('#skillFilters .filter').forEach(function(btn){
+   btn.addEventListener('click',function(){
+     document.querySelectorAll('#skillFilters .filter').forEach(function(b){b.classList.remove('active');});
+     btn.classList.add('active');
+     const filter=btn.dataset.filter;
+     document.querySelectorAll('.skill').forEach(function(card){
+       card.style.display=(filter==='all'||card.dataset.cat===filter)?'block':'none';
+     });
+   });
+ });
 
-  /* Reveal animation */
-  const revealObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add("show");
-      }
-    });
-  }, {threshold:0.08});
+ const observer=new IntersectionObserver(function(entries){
+   entries.forEach(function(entry){if(entry.isIntersecting)entry.target.classList.add('show');});
+ },{threshold:.08});
+ document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);});
 
-  document.querySelectorAll(".reveal").forEach(function(el){
-    revealObserver.observe(el);
-  });
-
-  /* Animated counters */
-  function animateCounter(el){
-    if(el.dataset.done === "1") return;
-    el.dataset.done = "1";
-
-    const target = Number(el.dataset.target || 0);
-    const suffix = el.dataset.suffix || "";
-    let start = null;
-
-    function frame(timestamp){
-      if(!start) start = timestamp;
-      const progress = Math.min((timestamp - start) / 1200, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-
-      el.textContent =
-        Math.floor(target * eased).toLocaleString() + suffix;
-
-      if(progress < 1){
-        requestAnimationFrame(frame);
-      }
-    }
-
-    requestAnimationFrame(frame);
-  }
-
-  const counterObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.querySelectorAll(".counter").forEach(animateCounter);
-      }
-    });
-  }, {threshold:0.2});
-
-  document.querySelectorAll(".quote").forEach(function(el){
-    counterObserver.observe(el);
-  });
-
-  /* Navigation highlighting */
-  const sections = Array.from(document.querySelectorAll("section[id]"));
-  const navLinks = Array.from(document.querySelectorAll(".nav a"));
-
-  function updateActiveNav(){
-    let current = "home";
-
-    sections.forEach(function(section){
-      if(window.scrollY >= section.offsetTop - 180){
-        current = section.id;
-      }
-    });
-
-    navLinks.forEach(function(link){
-      link.classList.toggle(
-        "active",
-        link.getAttribute("href") === "#" + current
-      );
-    });
-  }
-
-  window.addEventListener("scroll", updateActiveNav, {passive:true});
-  updateActiveNav();
-
-  /* Booking cards currently route to Contact.
-     Replace href values later with Calendly/Cal.com/Bookings URLs. */
-  document.querySelectorAll(".booking-card").forEach(function(card){
-    card.addEventListener("click", function(){
-      const service = card.dataset.booking || "General";
-      console.log("Booking interest:", service);
-    });
-  });
-
+ const sections=[...document.querySelectorAll('section[id]')];
+ const navLinks=[...nav.querySelectorAll('a')];
+ const updateNav=function(){
+   const y=window.scrollY+120;
+   let current='home';
+   sections.forEach(function(s){if(s.offsetTop<=y)current=s.id;});
+   navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+current);});
+   const max=document.documentElement.scrollHeight-window.innerHeight;
+   progress.style.width=(max>0?(window.scrollY/max)*100:0)+'%';
+   backtop.classList.toggle('show',window.scrollY>500);
+ };
+ window.addEventListener('scroll',updateNav,{passive:true});
+ backtop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+ updateNav();
 })();
 </script>
-
 </body>
 </html>
