@@ -276,6 +276,52 @@ button{font:inherit}
   .service-grid,.booking-grid{grid-template-columns:1fr}
   .topbar .themeText{display:none}
 }
+
+.employer-logo{
+  width:62px;height:62px;border-radius:14px;margin:0 auto 12px;
+  display:grid;place-items:center;overflow:hidden;
+  background:#fff;border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+.employer-logo svg{width:100%;height:100%;display:block}
+.employer-logo img{width:100%;height:100%;object-fit:contain;padding:8px}
+.node .employer-name{display:block;font-size:12px;font-weight:800;margin-top:8px}
+.node .employer-role{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+@media(max-width:1050px){
+  .sidebar{width:215px}
+  .main{margin-left:215px}
+  .hero{grid-template-columns:1fr}
+  .quote{max-width:900px;margin-top:15px}
+  .dashboard{grid-template-columns:1fr 1fr}
+  .service-grid,.booking-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .sidebar{width:270px}
+  .main{margin-left:0;padding:10px}
+  .topbar{padding-left:55px;justify-content:flex-end}
+  .hero{min-height:auto;padding:75px 18px 25px}
+  .hero h1{font-size:clamp(40px,13vw,62px)}
+  .hero p{font-size:15px}
+  .stats{grid-template-columns:1fr 1fr}
+  .dashboard,.service-grid,.booking-grid,.expertise{grid-template-columns:1fr}
+  .panel{padding:16px}
+  .head,.section-head{display:block}
+  .head p,.section-head p{margin-top:6px}
+  .timeline{padding-bottom:16px}
+  .node{min-width:175px}
+  .node:not(:last-child):after{width:70%}
+  .service-card,.booking-card{min-height:220px}
+  .service-cta{display:block}
+}
+@media(max-width:420px){
+  .topbar .btn{padding:9px 10px;font-size:12px}
+  .hero h1{letter-spacing:-1.5px}
+  .stats{gap:8px}
+  .stat strong{font-size:20px}
+  .chip{font-size:11px}
+  .employer-logo{width:54px;height:54px}
+}
+
 </style>
 </head>
 
@@ -385,39 +431,104 @@ button{font:inherit}
 
     <div class="timeline">
       <div class="node">
-        <div class="dot">💼</div>
+        <div class="employer-logo" title="NR Consulting">
+          <svg viewBox="0 0 120 120" role="img" aria-label="NR Consulting logo">
+            <rect width="120" height="120" rx="18" fill="#fff"/>
+            <text x="12" y="68" font-size="48" font-weight="900" font-style="italic" fill="#f05a28">NR</text>
+            <text x="62" y="55" font-size="13" font-weight="800" fill="#111">CONSULTING</text>
+            <text x="62" y="72" font-size="7" fill="#555">Candidates. Companies.</text>
+          </svg>
+        </div>
         <b>Aug 2019 – Jan 2021</b>
-        <small>Technical Recruiter<br>NR Consulting Service</small>
+        <span class="employer-role">Technical Recruiter</span>
+        <span class="employer-name">NR Consulting Service</span>
       </div>
+
       <div class="node">
-        <div class="dot">⌕</div>
+        <div class="employer-logo" title="NLB Services">
+          <svg viewBox="0 0 120 120" role="img" aria-label="NLB Services logo">
+            <rect width="120" height="120" rx="18" fill="#fff"/>
+            <path d="M17 67 L17 45 L30 32 L30 67 Z" fill="#b9d600"/>
+            <text x="34" y="70" font-size="35" font-weight="700" fill="#747474">nlb</text>
+            <text x="34" y="87" font-size="13" font-weight="600" fill="#777">services</text>
+          </svg>
+        </div>
         <b>Feb 2021 – Feb 2023</b>
-        <small>Technical Recruiter<br>NLB Services</small>
+        <span class="employer-role">Technical Recruiter</span>
+        <span class="employer-name">NLB Services</span>
       </div>
+
       <div class="node">
-        <div class="dot">♙</div>
+        <div class="employer-logo" title="Keasis">
+          <svg viewBox="0 0 120 120" role="img" aria-label="Keasis logo">
+            <rect width="120" height="120" rx="18" fill="#101820"/>
+            <circle cx="60" cy="45" r="22" fill="#1ec8c8" opacity=".95"/>
+            <path d="M45 45 L57 32 L57 40 L72 30 L72 45 L58 57 L58 68 L45 68 Z" fill="#fff"/>
+            <text x="60" y="93" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">KEASIS</text>
+          </svg>
+        </div>
         <b>Feb 2023 – Jan 2024</b>
-        <small>Senior Technical Recruiter<br>Keasis Inc.</small>
+        <span class="employer-role">Senior Technical Recruiter</span>
+        <span class="employer-name">Keasis Inc.</span>
       </div>
+
       <div class="node analytics">
-        <div class="dot">📊</div>
+        <div class="employer-logo" title="Marketing Analytics Project">
+          <svg viewBox="0 0 120 120" role="img" aria-label="Marketing Analytics Project">
+            <rect width="120" height="120" rx="18" fill="#07182a"/>
+            <rect x="20" y="61" width="14" height="30" rx="3" fill="#48dfd0"/>
+            <rect x="43" y="46" width="14" height="45" rx="3" fill="#3798ff"/>
+            <rect x="66" y="32" width="14" height="59" rx="3" fill="#9b5cff"/>
+            <path d="M19 38 C43 25 61 52 92 22" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="92" cy="22" r="5" fill="#fff"/>
+          </svg>
+        </div>
         <b>May 2023 – Feb 2024</b>
-        <small>Marketing Data Analyst<br>Freelance</small>
+        <span class="employer-role">Marketing Data Analyst</span>
+        <span class="employer-name">Freelance Project</span>
       </div>
+
       <div class="node">
-        <div class="dot">♙</div>
+        <div class="employer-logo" title="Primus Global Services">
+          <svg viewBox="0 0 120 120" role="img" aria-label="Primus Global Services logo">
+            <rect width="120" height="120" rx="18" fill="#fff"/>
+            <text x="60" y="51" text-anchor="middle" font-size="23" font-weight="800" fill="#8d0808">PRIMUS</text>
+            <path d="M18 59 H102" stroke="#aaa" stroke-width="2"/>
+            <text x="60" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#555">GLOBAL SERVICES</text>
+          </svg>
+        </div>
         <b>Jan 2024 – Dec 2024</b>
-        <small>Senior Technical Recruiter<br>Primus Global Services</small>
+        <span class="employer-role">Senior Technical Recruiter</span>
+        <span class="employer-name">Primus Global Services</span>
       </div>
+
       <div class="node">
-        <div class="dot">♙</div>
+        <div class="employer-logo" title="ARK Solutions">
+          <svg viewBox="0 0 120 120" role="img" aria-label="ARK Solutions logo">
+            <rect width="120" height="120" rx="18" fill="#fff"/>
+            <text x="60" y="57" text-anchor="middle" font-size="40" font-weight="900" fill="#4e8f21">ARK</text>
+            <text x="60" y="76" text-anchor="middle" font-size="10" font-weight="800" fill="#14619a">SOLUTIONS</text>
+            <circle cx="30" cy="92" r="4" fill="#14619a"/><circle cx="60" cy="92" r="4" fill="#4e8f21"/><circle cx="90" cy="92" r="4" fill="#14619a"/>
+          </svg>
+        </div>
         <b>Dec 2024 – Aug 2025</b>
-        <small>Senior Technical Recruiter<br>ARK Solutions</small>
+        <span class="employer-role">Senior Technical Recruiter</span>
+        <span class="employer-name">ARK Solutions</span>
       </div>
+
       <div class="node">
-        <div class="dot">★</div>
+        <div class="employer-logo" title="Pyramid Consulting">
+          <svg viewBox="0 0 120 120" role="img" aria-label="Pyramid Consulting logo">
+            <rect width="120" height="120" rx="18" fill="#fff"/>
+            <path d="M18 44 L31 23 L44 44 Z" fill="#f0b52b"/>
+            <path d="M23 44 L31 31 L36 44 Z" fill="#273069"/>
+            <text x="48" y="48" font-size="22" font-weight="900" fill="#272565">pyramid</text>
+            <text x="49" y="67" font-size="10" font-weight="800" fill="#e1a72b">CONSULTING</text>
+          </svg>
+        </div>
         <b>Sep 2025 – Present</b>
-        <small>Senior Executive Resourcing<br>Pyramid Consulting</small>
+        <span class="employer-role">Senior Executive Resourcing</span>
+        <span class="employer-name">Pyramid Consulting</span>
       </div>
     </div>
   </section>
@@ -523,7 +634,7 @@ button{font:inherit}
       </div>
 
       <div class="booking-grid">
-        <a class="booking-card" href="#contact" data-booking="AI/ML Hiring">
+        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="AI/ML Hiring">
           <span class="booking-icon">AI</span>
           <div>
             <h3>AI/ML Hiring</h3>
@@ -532,7 +643,7 @@ button{font:inherit}
           <b>Book a Conversation →</b>
         </a>
 
-        <a class="booking-card" href="#contact" data-booking="Technical Hiring">
+        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="Technical Hiring">
           <span class="booking-icon">⌘</span>
           <div>
             <h3>Technical Hiring</h3>
@@ -541,7 +652,7 @@ button{font:inherit}
           <b>Book a Conversation →</b>
         </a>
 
-        <a class="booking-card" href="#contact" data-booking="Recruitment RPO">
+        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="Recruitment RPO">
           <span class="booking-icon">RPO</span>
           <div>
             <h3>Recruitment RPO</h3>
@@ -550,7 +661,7 @@ button{font:inherit}
           <b>Book a Conversation →</b>
         </a>
 
-        <a class="booking-card" href="#contact" data-booking="Data Analytics">
+        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="Data Analytics">
           <span class="booking-icon">▥</span>
           <div>
             <h3>Data Analytics</h3>
@@ -559,7 +670,7 @@ button{font:inherit}
           <b>Book a Conversation →</b>
         </a>
 
-        <a class="booking-card" href="#contact" data-booking="Consulting">
+        <a class="booking-card" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener" data-booking="Consulting">
           <span class="booking-icon">✦</span>
           <div>
             <h3>Consulting</h3>
@@ -571,7 +682,7 @@ button{font:inherit}
 
       <div class="booking-note">
         <b>Direct scheduling:</b> Each service can have its own Calendly, Google Calendar, Microsoft Bookings or Cal.com URL.
-        <span>For now, the cards take visitors to Contact. Booking links can be added later without changing the page structure.</span>
+        <span>Clicking a booking card opens my Google Calendar scheduling page so you can choose an available time.</span>
       </div>
     </section>
 
@@ -626,7 +737,7 @@ button{font:inherit}
           <b>Have a project in mind?</b>
           <span>Schedule a conversation and let's define the scope, deliverables and timeline.</span>
         </div>
-        <a class="btn primary" href="#contact">Schedule a Meeting →</a>
+        <a class="btn primary" href="https://calendar.app.google/VD8cwmhamWghxgFj9" target="_blank" rel="noopener">Schedule a Meeting →</a>
       </div>
     </section>
 
